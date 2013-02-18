@@ -7,12 +7,15 @@
 	<link rel="stylesheet" href="assets/base.css">
 <head>
 <body>
+
 	<section id="turduckenapp">
 		<header id="header">
 			<h1>Pois</h1>
 			<input id="new-poi" placeholder="Point of Interest" autofocus>		
 		</header>
 		<section id="main">
+			<input id="toggle-all" type="checkbox">
+			<label for="toggle-all">Mark all as completed</label>
 			<ul id="poi-list"></ul>
 		</section>
 		<footer id="footer"></footer>
@@ -21,6 +24,16 @@
 		<p>Double-click to edit a poi</p>
 		<p>Written by Cliff Coulter</p>
 	</div>
+	
+	<script type="text-template" id="item-template">
+		<div class ="view">
+			<input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>>
+			<label><%- title %></label>
+			<button class="destroy"></button>
+		</div>
+		<input class="edit" value="<%- title %>">
+	</script>
+
 	<script type="text/template" id="item-template"></script>
 	<script type="text/template" id="stats-template"></script>
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
