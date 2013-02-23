@@ -1,0 +1,68 @@
+body {
+    background-color: #eee;
+}
+
+.poiContainer {
+    outline: 1px solid #aaa;
+    width: 350px;
+    height: 130px;
+    background-color: #fff;
+    float: left;
+    margin: 5px;
+}
+
+.poiContainer img {
+    float: left;
+    margin: 10px;
+    height: 100px; /** I added **/
+    width: 80px;
+}
+
+.poiContainer ul {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+.poiContainer button {
+    float: right;
+    margin: 10px;
+}
+
+#addPoi label {
+    width: 100px;
+    margin-right: 10px;
+    text-align: right;
+    line-height: 25px;
+}
+
+#addPoi label, #addPoi input {
+    display: block;
+    margin-bottom: 10px;
+    float: left;
+}
+/**
+#addPoilabel[for="title"], #addPoi label[for="coord"] {
+    clear: both;
+}
+**/
+
+#addPoi button {
+    display: block;
+    margin: 5px 20px 10px 10px;
+    float: right;
+    clear: both;
+}
+
+#addPoi div {
+    width: 550px;
+}
+
+#addPoi div:after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+}
