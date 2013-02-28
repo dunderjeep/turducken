@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=IE8" >
         <title>Backbone.js Turducken</title>
         <link rel="stylesheet" href="css/screen.css">
     </head>
@@ -34,17 +35,23 @@
     		<button class="delete">Delete</button>
 	</script>
 
-
+	<div id="map_canvas2"></div>
+	<div id="map_canvas"></div>
+	
 
 <!-- scripts -->
-        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
+    	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnjFRBQu4fIOsLVQEAjJwnFoQ3o2k0B4I&sensor=true"></script>        
         <script src="js/lib/underscore-min.js"></script>
         <script src="js/lib/backbone-min.js"></script>
         <script src="js/models/poi.js"></script>
         <script src="js/collections/pois.js"></script>
+	<script src="js/collections/locations.js"></script>
         <script src="js/views/poi.js"></script>
         <script src="js/views/pois.js"></script>
+	<script src="js/views/locations.js"></script>
+	<script src="js/views/map.js"></script>
         <script src="js/app.js"></script>
     </body>
 </html>

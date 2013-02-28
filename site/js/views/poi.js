@@ -22,8 +22,4 @@ app.PoiView = Backbone.View.extend({
 		return this;		
 	},
 
-	parse: function(response) {
-		response.id = response._id;
-		return response;
-	}
 });

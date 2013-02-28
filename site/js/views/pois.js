@@ -8,18 +8,17 @@ app.PoisView = Backbone.View.extend({
 	initialize: function() {
 		this.collection = new app.Pois();
 		this.collection.fetch();
-		this.render();
-
+		this.render();	
 		this.collection.on( 'add', this.renderPoi, this);
 		this.collection.on( 'reset', this.render, this);
+
 	},
 
-	render: function() {
+		render: function() {
 		_.each( this.collection.models, function(item) {
 			this.renderPoi( item);
 		}, this);
 	},
-
 	renderPoi: function(item) {
 		var poiView = new app.PoiView({
 			model: item

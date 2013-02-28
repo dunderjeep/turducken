@@ -66,3 +66,13 @@ body {
     font-size: 0;
     line-height: 0;
 }
+
+#fuckoff {
+	height: 100px;
+	clear: both;
+}
+#map_canvas {
+	height: 500px;
+	width: 500px;
+	clear: both;
+}

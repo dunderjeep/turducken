@@ -40,10 +40,11 @@ body {
     margin-bottom: 10px;
     float: left;
 }
-
+/**
 #addPoilabel[for="title"], #addPoi label[for="coord"] {
     clear: both;
 }
+**/
 
 #addPoi button {
     display: block;
@@ -64,4 +65,13 @@ body {
     clear: both;
     font-size: 0;
     line-height: 0;
+}
+
+#fuckoff {
+	height: 100px;
+	clear: both;
+}
+#map_canvas {
+	width: 500px;
+	clear: both;
 }
