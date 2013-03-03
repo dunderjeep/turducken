@@ -11,7 +11,8 @@ app.PoisView = Backbone.View.extend({
 		this.render();	
 		this.collection.on( 'add', this.renderPoi, this);
 		this.collection.on( 'reset', this.render, this);
-
+		this.mapView = new app.MapView(this.collection);
+//		this.collection.on( 'change', function(poi) {console.log(poi)});
 	},
 
 		render: function() {
@@ -20,6 +21,7 @@ app.PoisView = Backbone.View.extend({
 		}, this);
 	},
 	renderPoi: function(item) {
+		Backbone.pubSub.trigger('xxx');
 		var poiView = new app.PoiView({
 			model: item
 		});
@@ -32,7 +34,7 @@ app.PoisView = Backbone.View.extend({
 
 	addPoi: function(e) {
 		e.preventDefault();
-		
+		this.mapView = new app.MapView(this.collection); 
 		var formData = {};
 
 		$('#addPoi div').children('input').each(function(i, el) {

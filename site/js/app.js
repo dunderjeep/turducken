@@ -3,9 +3,11 @@
 var app = app || {};
 
 $(function() {
-	new app.LocationsView( pois );	
+	Backbone.pubSub = _.extend({}, Backbone.Events);
+//	new app.LocationsView( pois );	
 	new app.PoisView( pois );
-	var markers = new app.MarkerCollection();
-	new app.MapView( {markers: markers} );	
+			
+//	var markers = new app.Markers();
+//	new app.MapView( pois );
 //	new app.SitesView( pois );
 });
